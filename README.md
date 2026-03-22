@@ -265,3 +265,4 @@ For support, please:
 ---
 
 **🎓 Made with ❤️ for Bennett University Students**
+# CampusX-2.0
