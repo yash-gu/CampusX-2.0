@@ -25,7 +25,7 @@ const PasswordResetSchema = new mongoose.Schema({
 
 PasswordResetSchema.index({ token: 1 });
 PasswordResetSchema.index({ user: 1 });
-PasswordResetSchema.index({ expiresAt: 1 });
+// Remove duplicate expiresAt index - it's already handled by expireAfterSeconds
 
 // Auto-delete expired tokens
 PasswordResetSchema.index({ expiresAt: 1 }, { expireAfterSeconds: 0 });
