@@ -10,6 +10,8 @@ import postRoutes from './routes/posts.js';
 import productRoutes from './routes/products.js';
 import chatRoutes from './routes/chat.js';
 import uploadRoutes from './routes/upload.js';
+import documentUploadRoutes from './routes/documentUpload.js';
+import publicUploadRoutes from './routes/publicUpload.js';
 import eventRoutes from './routes/events.js';
 import studyResourceRoutes from './routes/studyResources.js';
 import socketHandler from './socket/socketHandler.js';
@@ -43,10 +45,13 @@ app.use('/api/posts', postRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/chat', chatRoutes);
 app.use('/api/upload', uploadRoutes);
+app.use('/api/upload', documentUploadRoutes);
+app.use('/api/public-upload', publicUploadRoutes);
 app.use('/api/events', eventRoutes);
 app.use('/api/study-resources', studyResourceRoutes);
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use('/uploads/documents', express.static(path.join(__dirname, 'uploads', 'documents')));
 
 app.get('/', (req, res) => {
   res.json({ message: 'CampusX API Server Running' });

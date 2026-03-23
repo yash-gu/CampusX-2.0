@@ -126,10 +126,10 @@ const StudyVault = () => {
 
   const handleFileUpload = async (file) => {
     const formData = new FormData();
-    formData.append('image', file);
+    formData.append('document', file);
 
     try {
-      const res = await api.post('/api/upload/image', formData, {
+      const res = await api.post('/api/public-upload/document', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -137,7 +137,7 @@ const StudyVault = () => {
 
       setNewResource({
         ...newResource,
-        fileUrl: res.data.imageUrl,
+        fileUrl: res.data.fileUrl,
         fileName: file.name,
         fileSize: file.size
       });
@@ -350,7 +350,7 @@ const StudyVault = () => {
                 type="file"
                 onChange={(e) => e.target.files[0] && handleFileUpload(e.target.files[0])}
                 className="input-field"
-                accept=".pdf,.doc,.docx,.ppt,.pptx,.txt"
+                accept="*"
                 required
               />
               {newResource.fileName && (

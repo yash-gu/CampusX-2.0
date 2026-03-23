@@ -61,38 +61,48 @@ const Home = () => {
           )}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className="bg-white bg-opacity-90 rounded-lg p-6 text-center">
-            <div className="text-bennett-blue text-4xl mb-4">📱</div>
-            <h3 className="text-xl font-semibold text-bennett-blue mb-2">The Buzz</h3>
-            <p className="text-gray-700">
-              Share thoughts, updates, and connect with fellow Bennett University students
-            </p>
-          </div>
+        <div className="mt-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <Link to="/feed" className="block">
+            <div className="bg-white bg-opacity-90 rounded-lg p-6 text-center hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+              <div className="text-bennett-blue text-4xl mb-4">📱</div>
+              <h3 className="text-xl font-semibold text-bennett-blue mb-2">The Buzz</h3>
+              <p className="text-gray-700">
+                Share thoughts, updates, and connect with fellow Bennett University students
+              </p>
+            </div>
+          </Link>
           
-          <div className="bg-white bg-opacity-90 rounded-lg p-6 text-center">
-            <div className="text-bennett-blue text-4xl mb-4">🛍️</div>
-            <h3 className="text-xl font-semibold text-bennett-blue mb-2">Unimart</h3>
-            <p className="text-gray-700">
-              Buy, sell, and trade items within the Bennett University community
-            </p>
-          </div>
+          <Link to="/marketplace" className="block">
+            <div className="bg-white bg-opacity-90 rounded-lg p-6 text-center hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+              <div className="text-bennett-blue text-4xl mb-4">🛍️</div>
+              <h3 className="text-xl font-semibold text-bennett-blue mb-2">Unimart</h3>
+              <p className="text-gray-700">
+                Buy, sell, and trade items within the Bennett University community
+              </p>
+            </div>
+          </Link>
           
-          <div className="bg-white bg-opacity-90 rounded-lg p-6 text-center">
-            <div className="text-bennett-blue text-4xl mb-4">📅</div>
-            <h3 className="text-xl font-semibold text-bennett-blue mb-2">Campus Calendar</h3>
-            <p className="text-gray-700">
-              Events, deadlines, and activities with RSVP and calendar integration
-            </p>
-          </div>
+          <Link to="/calendar" className="block">
+            <div className="bg-white bg-opacity-90 rounded-lg p-6 text-center hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+              <div className="text-bennett-blue text-4xl mb-4">📅</div>
+              <h3 className="text-xl font-semibold text-bennett-blue mb-2">Campus Calendar</h3>
+              <p className="text-gray-700">
+                Events, deadlines, and activities with RSVP and calendar integration
+              </p>
+            </div>
+          </Link>
           
-          <div className="bg-white bg-opacity-90 rounded-lg p-6 text-center">
-            <div className="text-bennett-blue text-4xl mb-4">📚</div>
-            <h3 className="text-xl font-semibold text-bennett-blue mb-2">Study Vault</h3>
-            <p className="text-gray-700">
-              Peer-to-peer notes sharing with ratings and course-specific filtering
-            </p>
-          </div>
+          <Link to="/study-vault" className="block">
+            <div className="bg-white bg-opacity-90 rounded-lg p-6 text-center hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+              <div className="text-bennett-blue text-4xl mb-4">📚</div>
+              <h3 className="text-xl font-semibold text-bennett-blue mb-2">Study Vault</h3>
+              <p className="text-gray-700">
+                Peer-to-peer notes sharing with ratings and course-specific filtering
+              </p>
+            </div>
+          </Link>
+        </div>
         </div>
 
         <div className="mt-16 bg-white bg-opacity-90 rounded-lg p-8">
