@@ -13,6 +13,7 @@ import Calendar from './pages/Calendar';
 import StudyVault from './pages/StudyVault';
 import Chat from './pages/Chat';
 import Profile from './pages/Profile';
+import QRPage from './pages/QRPage';
 import './App.css';
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
               <Route path="/study-vault" element={<StudyVault />} />
               <Route path="/chat" element={<Chat />} />
               <Route path="/profile" element={<Profile />} />
+              <Route path="/qr" element={<QRPage />} />
             </Routes>
           </main>
         </div>
