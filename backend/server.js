@@ -14,7 +14,6 @@ import documentUploadRoutes from './routes/documentUpload.js';
 import publicUploadRoutes from './routes/publicUpload.js';
 import eventRoutes from './routes/events.js';
 import studyResourceRoutes from './routes/studyResources.js';
-import qrRoutes from './routes/qr.js';
 import socketHandler from './socket/socketHandler.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -50,7 +49,6 @@ app.use('/api/upload', documentUploadRoutes);
 app.use('/api/public-upload', publicUploadRoutes);
 app.use('/api/events', eventRoutes);
 app.use('/api/study-resources', studyResourceRoutes);
-app.use('/api/qr', qrRoutes);
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use('/uploads/documents', express.static(path.join(__dirname, 'uploads', 'documents')));
